@@ -1,0 +1,5 @@
+rootProject.name = 'RNNativeToastExample'
+include ':react-native-native-toast-library'
+project(':react-native-native-toast-library').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-native-toast-library/android')
+
+include ':app'
