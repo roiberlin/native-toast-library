@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		30394EC221F0A4DE009BC625 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30394EB021F09EC5009BC625 /* libReact.a */; };
 		30394ECB21F0B007009BC625 /* RNNativeToastLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 30394EC921F0B007009BC625 /* RNNativeToastLibrary.m */; };
-		30394EEB21F0BA86009BC625 /* UIApplication+RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30394EE921F0BA86009BC625 /* UIApplication+RootViewController.m */; };
 		30394EEC21F0BA86009BC625 /* IOSNativeToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 30394EEA21F0BA86009BC625 /* IOSNativeToast.m */; };
 /* End PBXBuildFile section */
 
@@ -311,9 +310,7 @@
 		30394EA621F09EC5009BC625 /* RCTImageSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTImageSource.h; sourceTree = "<group>"; };
 		30394EC921F0B007009BC625 /* RNNativeToastLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNNativeToastLibrary.m; sourceTree = "<group>"; };
 		30394ECA21F0B007009BC625 /* RNNativeToastLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNNativeToastLibrary.h; sourceTree = "<group>"; };
-		30394EE721F0BA86009BC625 /* UIApplication+RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+RootViewController.h"; sourceTree = "<group>"; };
 		30394EE821F0BA86009BC625 /* IOSNativeToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOSNativeToast.h; sourceTree = "<group>"; };
-		30394EE921F0BA86009BC625 /* UIApplication+RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+RootViewController.m"; sourceTree = "<group>"; };
 		30394EEA21F0BA86009BC625 /* IOSNativeToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOSNativeToast.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -636,8 +633,6 @@
 			children = (
 				30394EE821F0BA86009BC625 /* IOSNativeToast.h */,
 				30394EEA21F0BA86009BC625 /* IOSNativeToast.m */,
-				30394EE721F0BA86009BC625 /* UIApplication+RootViewController.h */,
-				30394EE921F0BA86009BC625 /* UIApplication+RootViewController.m */,
 				30394ECA21F0B007009BC625 /* RNNativeToastLibrary.h */,
 				30394EC921F0B007009BC625 /* RNNativeToastLibrary.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
@@ -768,7 +763,6 @@
 			files = (
 				30394EEC21F0BA86009BC625 /* IOSNativeToast.m in Sources */,
 				30394ECB21F0B007009BC625 /* RNNativeToastLibrary.m in Sources */,
-				30394EEB21F0BA86009BC625 /* UIApplication+RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

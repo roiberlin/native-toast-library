@@ -7,7 +7,7 @@
 //
 
 #import "IOSNativeToast.h"
-#import "UIApplication+RootViewController.h"
+#import <UIKit/UIKit.h>
 
 @implementation IOSNativeToast
 
@@ -20,23 +20,29 @@ static double const DEFAULT_TOAST_DURATION = 3.5;
 
 -(void) showToast:(NSString*) msg duration:(double) duration
 {
-    UIViewController* rootVC = [[UIApplication sharedApplication]getRootViewController];
-    if (rootVC == nil)
+    UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    UIViewController* rootVC = [[UIViewController alloc] init];
+    if (rootVC == nil || window == nil)
     {
         return;
     }
+    
+    window.backgroundColor = [UIColor clearColor];
+    window.rootViewController = rootVC;
+    [window makeKeyAndVisible];
     
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:nil message:msg preferredStyle:UIAlertControllerStyleActionSheet];
     
     [rootVC presentViewController:alert animated:YES completion:nil];
     
-    [self closeToast:alert duration:duration];
+    [self closeToast:window alert:alert duration:duration];
 }
 
-- (void) closeToast:(UIAlertController*) alert duration:(double) duration
+- (void) closeToast:(UIWindow*) window alert:(UIAlertController*) alert duration:(double) duration
 {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [alert dismissViewControllerAnimated:true completion:nil];
+        [alert dismissViewControllerAnimated:YES completion:nil];
+        [window removeFromSuperview];
     });
 }
 
