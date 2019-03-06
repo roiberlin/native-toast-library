@@ -31,9 +31,7 @@ RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(show:(NSString *)text)
 {
-    dispatch_async([self methodQueue], ^{
-        [self.toast showToast:text];
-    });
+    [self.toast showToast:text];
 }
 
 @end
